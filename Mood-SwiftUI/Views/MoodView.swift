@@ -20,9 +20,10 @@ struct MoodView: View {
             Text("How do you feel right now?")
                 .font(
                     .system(size: 30)
-                    .weight(.bold)
+                    .weight(.heavy)
                 )
-            
+                .frame(width: UIScreen.main.bounds.width, height: 100)
+
             VStack {
                 HStack {
                     ForEach((0...3), id: \.self) { index in
@@ -49,10 +50,12 @@ struct MoodView: View {
                     }
                 }
 
-            }
+            }.frame(width: UIScreen.main.bounds.width, height: 400)
+            
+            Spacer()
             
             NextButton()
-                .padding()
+                .frame(width: 100, height: 200)
         }
     }
 }
