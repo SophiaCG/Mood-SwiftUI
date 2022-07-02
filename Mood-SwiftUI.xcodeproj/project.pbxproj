@@ -13,6 +13,14 @@
 		4AAD4412286CD40400091F9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD4411286CD40400091F9C /* Preview Assets.xcassets */; };
 		4AAD4414286CD40400091F9C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4413286CD40400091F9C /* Persistence.swift */; };
 		4AAD4417286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4415286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld */; };
+		4AAD4422286D1CF600091F9C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4421286D1CF600091F9C /* LandingView.swift */; };
+		4AAD4424286D1D4F00091F9C /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4423286D1D4F00091F9C /* MoodView.swift */; };
+		4AAD4426286D1D8400091F9C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4425286D1D8400091F9C /* ActivityView.swift */; };
+		4AAD4428286D1DC000091F9C /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4427286D1DC000091F9C /* MoodLog.swift */; };
+		4AAD442A286D4FDC00091F9C /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4429286D4FDC00091F9C /* NextButton.swift */; };
+		4AC16FEE286E210E0051B9FB /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FED286E210E0051B9FB /* TextBox.swift */; };
+		4AC16FF0286FAF740051B9FB /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FEF286FAF740051B9FB /* TimeView.swift */; };
+		4AC16FF2286FC3C20051B9FB /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FF1286FC3C20051B9FB /* PopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +31,14 @@
 		4AAD4411286CD40400091F9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AAD4413286CD40400091F9C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4AAD4416286CD40400091F9C /* Mood_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mood_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
+		4AAD4421286D1CF600091F9C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		4AAD4423286D1D4F00091F9C /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
+		4AAD4425286D1D8400091F9C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		4AAD4427286D1DC000091F9C /* MoodLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLog.swift; sourceTree = "<group>"; };
+		4AAD4429286D4FDC00091F9C /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		4AC16FED286E210E0051B9FB /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
+		4AC16FEF286FAF740051B9FB /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		4AC16FF1286FC3C20051B9FB /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				4AAD440A286CD40200091F9C /* Mood_SwiftUIApp.swift */,
-				4AAD440C286CD40200091F9C /* ContentView.swift */,
+				4AAD441F286D1C5600091F9C /* Models */,
+				4AAD4420286D1C5D00091F9C /* ViewModels */,
+				4AAD441D286D1C3E00091F9C /* Views */,
 				4AAD440E286CD40400091F9C /* Assets.xcassets */,
 				4AAD4413286CD40400091F9C /* Persistence.swift */,
 				4AAD4415286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld */,
@@ -71,6 +89,36 @@
 				4AAD4411286CD40400091F9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AAD441D286D1C3E00091F9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AAD440C286CD40200091F9C /* ContentView.swift */,
+				4AAD4421286D1CF600091F9C /* LandingView.swift */,
+				4AC16FEF286FAF740051B9FB /* TimeView.swift */,
+				4AAD4423286D1D4F00091F9C /* MoodView.swift */,
+				4AAD4425286D1D8400091F9C /* ActivityView.swift */,
+				4AC16FED286E210E0051B9FB /* TextBox.swift */,
+				4AAD4427286D1DC000091F9C /* MoodLog.swift */,
+				4AAD4429286D4FDC00091F9C /* NextButton.swift */,
+				4AC16FF1286FC3C20051B9FB /* PopupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AAD441F286D1C5600091F9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4AAD4420286D1C5D00091F9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +192,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AAD4414286CD40400091F9C /* Persistence.swift in Sources */,
+				4AAD4424286D1D4F00091F9C /* MoodView.swift in Sources */,
+				4AAD4422286D1CF600091F9C /* LandingView.swift in Sources */,
+				4AAD442A286D4FDC00091F9C /* NextButton.swift in Sources */,
+				4AC16FF0286FAF740051B9FB /* TimeView.swift in Sources */,
+				4AAD4428286D1DC000091F9C /* MoodLog.swift in Sources */,
 				4AAD440D286CD40200091F9C /* ContentView.swift in Sources */,
+				4AAD4426286D1D8400091F9C /* ActivityView.swift in Sources */,
 				4AAD4417286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld in Sources */,
+				4AC16FF2286FC3C20051B9FB /* PopupView.swift in Sources */,
+				4AC16FEE286E210E0051B9FB /* TextBox.swift in Sources */,
 				4AAD440B286CD40200091F9C /* Mood_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

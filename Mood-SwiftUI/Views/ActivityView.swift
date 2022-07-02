@@ -17,31 +17,36 @@ struct ActivityView: View {
     var body: some View {
         
         
-        VStack {
+        ScrollView {
+            VStack {
+                    
+                    Text("What are you doing right now?")
+                        .font(
+                            .system(size: 28)
+                            .weight(.heavy)
+                        )
+                        .frame(width: UIScreen.main.bounds.width, height: 50)
+                        .padding(.top, -70)
                 
-                Text("What are you doing right now?")
-                    .font(
-                        .system(size: 28)
-                        .weight(.heavy)
-                    )
-                    .frame(width: UIScreen.main.bounds.width, height: 100)
-                LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                    ForEach((0...icons.count - 1), id: \.self) {
-                        Image(icons[$0 % icons.count])
-                            .resizable()
-                            .frame(width: 70, height: 70)
-                            .opacity(selected ? 1.0 : 0.5)
-                            .onTapGesture {
-                                selected.toggle()
-                            }
+                    LazyVGrid(columns: gridItemLayout, spacing: 20) {
+                        ForEach((0...icons.count - 1), id: \.self) {
+                            Image(icons[$0 % icons.count])
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                                .opacity(selected ? 1.0 : 0.5)
+                                .onTapGesture {
+                                    selected.toggle()
+                                }
+                        }
                     }
+                
+                Spacer()
+                
+                NavigationLink(destination: TextBox()) {
+                    NextButton(title: "Next", color: .green)
                 }
-            
-            Spacer()
-            
-            NextButton()
-                .frame(width: 100, height: 200)
-        }.padding()
+            }.padding()
+        }
     }
 }
 

@@ -10,12 +10,13 @@ import SwiftUI
 
 struct NextButton: View {
     
+    var title: String
+    var color: Color
+    
     var body: some View {
         
-        Button {
-            print("Button pressed!")
-        } label: {
-            Text("Next")
+        VStack {
+            Text(title)
                 .font(
                     .system(size: 22)
                     .weight(.bold)
@@ -24,13 +25,13 @@ struct NextButton: View {
                 .padding()
                 .background(.green)
                 .foregroundColor(.white)
-                .cornerRadius(15)
-        }
+            .cornerRadius(15)
+        }.frame(width: 100, height: 200)
     }
 }
 
 struct NextButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        NextButton()
+        NextButton(title: "Next", color: .green)
     }
 }
