@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ActivityView: View {
     
-    @State var selected: Bool = false
+    @ObservedObject var viewModel = ViewModel()
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     let icons = ["cleaning", "cooking", "date", "drinking", "drugs", "eating", "family", "gaming", "gardening", "going to sleep", "listening to music", "make-up", "painting", "partying", "pet", "reading", "shopping", "singing", "traveling", "waking up", "watching tv", "working out", "working", "yoga"]
     
@@ -20,26 +20,26 @@ struct ActivityView: View {
         ScrollView {
             VStack {
                     
-                    Text("What are you doing right now?")
-                        .font(
-                            .system(size: 28)
-                            .weight(.heavy)
-                        )
-                        .frame(width: UIScreen.main.bounds.width, height: 50)
-                        .padding(.top, -70)
+                Text("What are you doing right now?")
+                    .font(
+                        .system(size: 28)
+                        .weight(.heavy)
+                    )
+                    .frame(width: UIScreen.main.bounds.width, height: 50)
+                    .padding(.top, -70)
                 
-                    LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                        ForEach((0...icons.count - 1), id: \.self) {
-                            Image(icons[$0 % icons.count])
-                                .resizable()
-                                .frame(width: 70, height: 70)
-                                .opacity(selected ? 1.0 : 0.5)
-                                .onTapGesture {
-                                    selected.toggle()
-                                }
-                        }
+                LazyVGrid(columns: gridItemLayout, spacing: 30) {
+                    ForEach(0..<icons.count, id: \.self) { index in
+                        Image(icons[index % icons.count])
+                            .resizable()
+                            .frame(width: 90, height: 90)
+                            .opacity(viewModel.checkActivities(activity: icons[index]) ? 1.0 : 0.5)
+                            .onTapGesture {
+                                viewModel.addDeleteActivity(activity: icons[index])
+                            }
                     }
-                
+                }
+
                 Spacer()
                 
                 NavigationLink(destination: TextBox()) {

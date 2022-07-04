@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MoodView: View {
     
-    @State var selected: Bool = false
+    @ObservedObject var viewModel = ViewModel()
     let icons = ["angry", "cry", "dead", "excited", "expressionless", "happy", "laughing", "love", "money", "sad", "screaming", "sick"]
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
@@ -27,13 +27,13 @@ struct MoodView: View {
                     .frame(width: UIScreen.main.bounds.width, height: 100)
 
                 LazyVGrid(columns: gridItemLayout, spacing: 30) {
-                    ForEach((0...icons.count - 1), id: \.self) {
-                        Image(icons[$0 % icons.count])
+                    ForEach(0..<icons.count, id: \.self) { index in
+                        Image(icons[index % icons.count])
                             .resizable()
                             .frame(width: 90, height: 90)
-                            .opacity(selected ? 1.0 : 0.5)
+                            .opacity(viewModel.checkMoods(mood: icons[index]) ? 1.0 : 0.5)
                             .onTapGesture {
-                                selected.toggle()
+                                viewModel.addDeleteMood(mood: icons[index])
                             }
                     }
                 }
@@ -69,4 +69,3 @@ struct MoodView_Previews: PreviewProvider {
     https://icons8.com/icon/j9l6X86yD8yJ/money
     https://icons8.com/icon/JLdBk3w9zKZ2/tongue-out
  */
-
