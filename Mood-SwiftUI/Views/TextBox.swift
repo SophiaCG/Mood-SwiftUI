@@ -10,6 +10,9 @@ import SwiftUI
 
 struct TextBox: View {
     
+    @Environment(\.managedObjectContext) var context
+
+    @EnvironmentObject var viewModel: ViewModel
     @State private var text: String = ""
     @State private var show: Bool = false
 
@@ -50,14 +53,28 @@ struct TextBox: View {
                 NextButton(title: "Complete", color: .purple)
                     .onTapGesture {
                         withAnimation(.easeInOut) { show = true }
+                        print(viewModel.moods)
+                        saveEntry(entry: Entry(date: Date.now, moods: viewModel.moods, activities: viewModel.activities, text: text))
                     }
             }
             
             if show {
                 PopupView(show: $show)
             }
-
         }
+    }
+    
+    // Adds recipe to Core Data
+    private func saveEntry(entry: Entry) {
+
+        let entryData = Item(context: context)
+        
+        entryData.date = entry.date
+        entryData.moods = entry.moods
+        entryData.activities = entry.activities
+        entryData.text = entry.text
+        print("SAVED DATA: \(entryData)")
+        try? context.save()
     }
 }
 

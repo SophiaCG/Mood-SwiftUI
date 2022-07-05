@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ActivityView: View {
     
-    @ObservedObject var viewModel = ViewModel()
+    @EnvironmentObject var viewModel: ViewModel
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     let icons = ["cleaning", "cooking", "date", "drinking", "drugs", "eating", "family", "gaming", "gardening", "going to sleep", "listening to music", "make-up", "painting", "partying", "pet", "reading", "shopping", "singing", "traveling", "waking up", "watching tv", "working out", "working", "yoga"]
     

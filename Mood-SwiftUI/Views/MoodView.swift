@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MoodView: View {
     
-    @ObservedObject var viewModel = ViewModel()
+    @EnvironmentObject var viewModel: ViewModel
     let icons = ["angry", "cry", "dead", "excited", "expressionless", "happy", "laughing", "love", "money", "sad", "screaming", "sick"]
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
