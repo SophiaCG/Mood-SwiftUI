@@ -9,9 +9,11 @@ import Foundation
 
 class ViewModel: ObservableObject {
     
+    @Published var date: Date = Date.now
     @Published var moods: [String] = []
     @Published var activities: [String] = []
-
+    @Published var text: String = ""
+    
     func addDeleteMood(mood: String) {
         if checkMoods(mood: mood) {
             if let index = moods.firstIndex(of: mood) {

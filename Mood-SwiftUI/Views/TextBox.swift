@@ -53,8 +53,8 @@ struct TextBox: View {
                 NextButton(title: "Complete", color: .purple)
                     .onTapGesture {
                         withAnimation(.easeInOut) { show = true }
-                        print(viewModel.moods)
-                        saveEntry(entry: Entry(date: Date.now, moods: viewModel.moods, activities: viewModel.activities, text: text))
+                        viewModel.text = text
+                        saveEntry()
                     }
             }
             
@@ -65,17 +65,18 @@ struct TextBox: View {
     }
     
     // Adds recipe to Core Data
-    private func saveEntry(entry: Entry) {
+    private func saveEntry() {
 
         let entryData = Item(context: context)
         
-        entryData.date = entry.date
-        entryData.moods = entry.moods
-        entryData.activities = entry.activities
-        entryData.text = entry.text
+        entryData.date = viewModel.date
+        entryData.moods = viewModel.moods
+        entryData.activities = viewModel.activities
+        entryData.text = viewModel.text
         print("SAVED DATA: \(entryData)")
         try? context.save()
     }
+    
 }
 
 struct TextBox_Previews: PreviewProvider {
