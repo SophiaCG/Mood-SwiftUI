@@ -9,10 +9,13 @@ import Foundation
 
 class ViewModel: ObservableObject {
     
-    @Published var date: Date = Date.now
     @Published var moods: [String] = []
     @Published var activities: [String] = []
     @Published var text: String = ""
+    
+    func formatDate(date: Date) -> String {
+        return date.formatted(date: .complete, time: .standard)
+    }
     
     func addDeleteMood(mood: String) {
         if checkMoods(mood: mood) {

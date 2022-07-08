@@ -9,13 +9,13 @@ import Foundation
 
 class Entry: Identifiable {
     
-    var date: Date
+    var date: String
     var moods: [String]
     var activities: [String]
     var text: String
     
-    init(date: Date, moods: [String], activities: [String], text: String) {
-        self.date = Date.now
+    init(date: String, moods: [String], activities: [String], text: String) {
+        self.date = ""
         self.moods = []
         self.activities = []
         self.text = ""

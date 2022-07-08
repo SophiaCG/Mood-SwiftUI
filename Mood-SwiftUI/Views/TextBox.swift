@@ -69,7 +69,7 @@ struct TextBox: View {
 
         let entryData = Item(context: context)
         
-        entryData.date = viewModel.date
+        entryData.date = viewModel.formatDate(date: Date.now)
         entryData.moods = viewModel.moods
         entryData.activities = viewModel.activities
         entryData.text = viewModel.text
