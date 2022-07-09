@@ -16,37 +16,34 @@ struct ActivityView: View {
     
     var body: some View {
         
-        
-        ScrollView {
-            VStack {
-                    
-                Text("What are you doing right now?")
-                    .font(
-                        .system(size: 28)
-                        .weight(.heavy)
-                    )
-                    .frame(width: UIScreen.main.bounds.width, height: 50)
-                    .padding(.top, -70)
+        VStack {
                 
-                LazyVGrid(columns: gridItemLayout, spacing: 30) {
-                    ForEach(0..<icons.count, id: \.self) { index in
-                        Image(icons[index % icons.count])
-                            .resizable()
-                            .frame(width: 90, height: 90)
-                            .opacity(viewModel.checkActivities(activity: icons[index]) ? 1.0 : 0.5)
-                            .onTapGesture {
-                                viewModel.addDeleteActivity(activity: icons[index])
-                            }
-                    }
+            Text("What are you doing right now?")
+                .frame(width: UIScreen.main.bounds.width, height: 50)
+                .font(
+                    .system(size: 28)
+                    .weight(.heavy)
+                ).padding(.top, -50)
+            
+            LazyVGrid(columns: gridItemLayout, spacing: 20) {
+                ForEach(0..<icons.count, id: \.self) { index in
+                    Image(icons[index % icons.count])
+                        .resizable()
+                        .frame(width: 75, height: 75)
+                        .opacity(viewModel.checkActivities(activity: icons[index]) ? 1.0 : 0.5)
+                        .onTapGesture {
+                            viewModel.addDeleteActivity(activity: icons[index])
+                        }
                 }
-
-                Spacer()
-                
-                NavigationLink(destination: TextBox()) {
-                    NextButton(title: "Next", color: .green)
-                }
-            }.padding()
-        }
+            }
+            
+            NavigationLink(destination: TextBox()) {
+                NextButton(title: "Next", color: .green)
+            }.frame(width: 100, height: 150)
+            
+            Spacer()
+            
+        }.padding()
     }
 }
 

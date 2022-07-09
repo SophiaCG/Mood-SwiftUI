@@ -20,11 +20,11 @@ struct MoodView: View {
             VStack {
                 
                 Text("How do you feel right now?")
+                    .frame(width: UIScreen.main.bounds.width, height: 100)
                     .font(
                         .system(size: 30)
                         .weight(.heavy)
                     )
-                    .frame(width: UIScreen.main.bounds.width, height: 100)
 
                 LazyVGrid(columns: gridItemLayout, spacing: 30) {
                     ForEach(0..<icons.count, id: \.self) { index in
@@ -37,12 +37,13 @@ struct MoodView: View {
                             }
                     }
                 }
-
-                Spacer()
                 
                 NavigationLink(destination: ActivityView()) {
                     NextButton(title: "Next", color: .green)
-                }
+                }.frame(width: 100, height: 150)
+
+                Spacer()
+
             }.navigationBarHidden(true)
         }
     }

@@ -44,15 +44,18 @@ struct PopupView: View {
                 )
                 .padding(.bottom, -40)
             
-            NextButton(title: "Add Entry", color: .blue)
-
+            NavigationLink(destination: MoodView()) {
+                NextButton(title: "Add Entry", color: .blue)
+            }.frame(width: 100, height: 200)
         }
         .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.5, alignment: .center)
-        .background(Color(UIColor.systemGray5))
         .cornerRadius(30)
+        .background(.white)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color(UIColor.lightGray), lineWidth: 2)
+                .shadow(color: .black, radius: 3, x: 2, y: 2)
+
         )
 
     }

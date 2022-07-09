@@ -25,8 +25,7 @@ struct TextBox: View {
                     .font(
                         .system(size: 25)
                         .weight(.heavy)
-                    )
-                    .frame(width: UIScreen.main.bounds.width * 0.93, height: 125)
+                    ).frame(width: UIScreen.main.bounds.width * 0.93, height: 100)
 
                 ZStack {
                     
@@ -47,15 +46,15 @@ struct TextBox: View {
                             .foregroundColor(.gray)
                     }
                 }
-                
-                Spacer()
-                
+                                
                 NextButton(title: "Complete", color: .purple)
+                    .frame(width: 100, height: 150)
                     .onTapGesture {
-                        withAnimation(.easeInOut) { show = true }
-                        viewModel.text = text
+                        show = true
                         saveEntry()
                     }
+                
+                Spacer()
             }
             
             if show {
@@ -72,7 +71,7 @@ struct TextBox: View {
         entryData.date = viewModel.formatDate(date: Date.now)
         entryData.moods = viewModel.moods
         entryData.activities = viewModel.activities
-        entryData.text = viewModel.text
+        entryData.text = text
         print("SAVED DATA: \(entryData)")
         try? context.save()
     }
