@@ -76,7 +76,6 @@ struct TextBox: View {
         print("SAVED DATA: \(entryData)")
         try? context.save()
     }
-    
 }
 
 struct TextBox_Previews: PreviewProvider {
