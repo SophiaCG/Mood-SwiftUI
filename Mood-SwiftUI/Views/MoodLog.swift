@@ -21,7 +21,12 @@ struct MoodLog: View {
         ScrollView {
             
             VStack {
-                
+                Text("Mood Log")
+                    .font(
+                        .system(size: 40)
+                        .weight(.heavy)
+                    ).frame(width: UIScreen.main.bounds.width * 0.85, height: 65, alignment: .leading)
+
                 ForEach(entryData, id: \.self) { entry in
                     
                     ZStack {

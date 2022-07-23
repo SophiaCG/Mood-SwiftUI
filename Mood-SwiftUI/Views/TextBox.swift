@@ -26,6 +26,7 @@ struct TextBox: View {
                         .system(size: 25)
                         .weight(.heavy)
                     ).frame(width: UIScreen.main.bounds.width * 0.93, height: 100)
+                    .padding(.top, -50)
 
                 ZStack {
                     

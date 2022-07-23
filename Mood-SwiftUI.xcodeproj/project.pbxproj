@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A757FCD2879118000CE1CC3 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A757FCC2879118000CE1CC3 /* MoodEntry.swift */; };
+		4A757FCF28791E6700CE1CC3 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A757FCE28791E6700CE1CC3 /* DeleteButton.swift */; };
 		4AAD440B286CD40200091F9C /* Mood_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD440A286CD40200091F9C /* Mood_SwiftUIApp.swift */; };
 		4AAD440D286CD40200091F9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD440C286CD40200091F9C /* ContentView.swift */; };
 		4AAD440F286CD40400091F9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD440E286CD40400091F9C /* Assets.xcassets */; };
 		4AAD4412286CD40400091F9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD4411286CD40400091F9C /* Preview Assets.xcassets */; };
 		4AAD4414286CD40400091F9C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4413286CD40400091F9C /* Persistence.swift */; };
-		4AAD4417286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4415286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld */; };
-		4AAD4422286D1CF600091F9C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4421286D1CF600091F9C /* LandingView.swift */; };
 		4AAD4424286D1D4F00091F9C /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4423286D1D4F00091F9C /* MoodView.swift */; };
 		4AAD4426286D1D8400091F9C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4425286D1D8400091F9C /* ActivityView.swift */; };
 		4AAD4428286D1DC000091F9C /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD4427286D1DC000091F9C /* MoodLog.swift */; };
@@ -21,17 +21,20 @@
 		4AC16FEE286E210E0051B9FB /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FED286E210E0051B9FB /* TextBox.swift */; };
 		4AC16FF0286FAF740051B9FB /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FEF286FAF740051B9FB /* TimeView.swift */; };
 		4AC16FF2286FC3C20051B9FB /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FF1286FC3C20051B9FB /* PopupView.swift */; };
+		4AC16FF4287259D80051B9FB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FF3287259D80051B9FB /* Model.swift */; };
+		4AC16FF6287261020051B9FB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FF5287261020051B9FB /* ViewModel.swift */; };
+		4AC16FFE287688FC0051B9FB /* Mood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AC16FFC287688FC0051B9FB /* Mood.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A757FCC2879118000CE1CC3 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		4A757FCE28791E6700CE1CC3 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		4AAD4407286CD40200091F9C /* Mood-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mood-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAD440A286CD40200091F9C /* Mood_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood_SwiftUIApp.swift; sourceTree = "<group>"; };
 		4AAD440C286CD40200091F9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AAD440E286CD40400091F9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAD4411286CD40400091F9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AAD4413286CD40400091F9C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4AAD4416286CD40400091F9C /* Mood_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mood_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
-		4AAD4421286D1CF600091F9C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		4AAD4423286D1D4F00091F9C /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
 		4AAD4425286D1D8400091F9C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		4AAD4427286D1DC000091F9C /* MoodLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLog.swift; sourceTree = "<group>"; };
@@ -39,6 +42,9 @@
 		4AC16FED286E210E0051B9FB /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		4AC16FEF286FAF740051B9FB /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		4AC16FF1286FC3C20051B9FB /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		4AC16FF3287259D80051B9FB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4AC16FF5287261020051B9FB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4AC16FFD287688FC0051B9FB /* Mood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mood.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A757FD02879210400CE1CC3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4A757FCC2879118000CE1CC3 /* MoodEntry.swift */,
+				4A757FCE28791E6700CE1CC3 /* DeleteButton.swift */,
+				4AAD4429286D4FDC00091F9C /* NextButton.swift */,
+				4AC16FF1286FC3C20051B9FB /* PopupView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		4AAD43FE286CD40200091F9C = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +94,7 @@
 				4AAD441D286D1C3E00091F9C /* Views */,
 				4AAD440E286CD40400091F9C /* Assets.xcassets */,
 				4AAD4413286CD40400091F9C /* Persistence.swift */,
-				4AAD4415286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld */,
+				4AC16FFC287688FC0051B9FB /* Mood.xcdatamodeld */,
 				4AAD4410286CD40400091F9C /* Preview Content */,
 			);
 			path = "Mood-SwiftUI";
@@ -95,14 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				4AAD440C286CD40200091F9C /* ContentView.swift */,
-				4AAD4421286D1CF600091F9C /* LandingView.swift */,
 				4AC16FEF286FAF740051B9FB /* TimeView.swift */,
 				4AAD4423286D1D4F00091F9C /* MoodView.swift */,
 				4AAD4425286D1D8400091F9C /* ActivityView.swift */,
 				4AC16FED286E210E0051B9FB /* TextBox.swift */,
 				4AAD4427286D1DC000091F9C /* MoodLog.swift */,
-				4AAD4429286D4FDC00091F9C /* NextButton.swift */,
-				4AC16FF1286FC3C20051B9FB /* PopupView.swift */,
+				4A757FD02879210400CE1CC3 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +125,7 @@
 		4AAD441F286D1C5600091F9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AC16FF3287259D80051B9FB /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +133,7 @@
 		4AAD4420286D1C5D00091F9C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4AC16FF5287261020051B9FB /* ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,13 +210,16 @@
 			files = (
 				4AAD4414286CD40400091F9C /* Persistence.swift in Sources */,
 				4AAD4424286D1D4F00091F9C /* MoodView.swift in Sources */,
-				4AAD4422286D1CF600091F9C /* LandingView.swift in Sources */,
+				4A757FCD2879118000CE1CC3 /* MoodEntry.swift in Sources */,
 				4AAD442A286D4FDC00091F9C /* NextButton.swift in Sources */,
 				4AC16FF0286FAF740051B9FB /* TimeView.swift in Sources */,
 				4AAD4428286D1DC000091F9C /* MoodLog.swift in Sources */,
+				4AC16FF6287261020051B9FB /* ViewModel.swift in Sources */,
+				4AC16FF4287259D80051B9FB /* Model.swift in Sources */,
+				4AC16FFE287688FC0051B9FB /* Mood.xcdatamodeld in Sources */,
 				4AAD440D286CD40200091F9C /* ContentView.swift in Sources */,
 				4AAD4426286D1D8400091F9C /* ActivityView.swift in Sources */,
-				4AAD4417286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld in Sources */,
+				4A757FCF28791E6700CE1CC3 /* DeleteButton.swift in Sources */,
 				4AC16FF2286FC3C20051B9FB /* PopupView.swift in Sources */,
 				4AC16FEE286E210E0051B9FB /* TextBox.swift in Sources */,
 				4AAD440B286CD40200091F9C /* Mood_SwiftUIApp.swift in Sources */,
@@ -405,13 +425,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4AAD4415286CD40400091F9C /* Mood_SwiftUI.xcdatamodeld */ = {
+		4AC16FFC287688FC0051B9FB /* Mood.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4AAD4416286CD40400091F9C /* Mood_SwiftUI.xcdatamodel */,
+				4AC16FFD287688FC0051B9FB /* Mood.xcdatamodel */,
 			);
-			currentVersion = 4AAD4416286CD40400091F9C /* Mood_SwiftUI.xcdatamodel */;
-			path = Mood_SwiftUI.xcdatamodeld;
+			currentVersion = 4AC16FFD287688FC0051B9FB /* Mood.xcdatamodel */;
+			path = Mood.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -24,7 +24,7 @@ struct MoodView: View {
                     .font(
                         .system(size: 30)
                         .weight(.heavy)
-                    )
+                    ).padding(.top, -100)
 
                 LazyVGrid(columns: gridItemLayout, spacing: 30) {
                     ForEach(0..<icons.count, id: \.self) { index in
@@ -44,7 +44,7 @@ struct MoodView: View {
 
                 Spacer()
 
-            }.navigationBarHidden(true)
+            }
         }
     }
 }
